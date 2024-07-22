@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.text-column {
+    flex: 1;
+    overflow-y: auto; /* Change to 'auto' to enable scrolling */
+    max-height: 80vh;
+}
+
+.image-column {
+    width: 300px;
+    position: sticky;
+    top: 20px;
+}
+
+.image-column img {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+}

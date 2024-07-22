@@ -1,0 +1,140 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll-Triggered Animation</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+    <div class="container">
+        <div class="text-column" id="textColumn">
+            <div class="text-content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae velit nec odio finibus auctor.</p>
+                <p>Curabitur lobortis est ac metus dignissim, et luctus velit luctus.</p>
+                <p>Suspendisse consequat, tortor nec consequat varius, orci ex tristique lectus, eget vestibulum augue tellus nec purus.</p>
+                <p>Mauris ut consequat neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                <p>Phasellus non interdum lectus, non consequat nisl. Integer vitae vehicula dui, non hendrerit urna.</p>
+                <p>Sed nec scelerisque velit. Vivamus tempor dui vel pretium lobortis.</p>
+                <p>Donec et nisi sed nunc aliquet bibendum. Sed bibendum velit sed nisi fringilla, at laoreet turpis mattis.</p>
+                <p>Etiam posuere quam at augue vestibulum, et auctor urna venenatis.</p>
+            </div>
+        </div>
+        <div class="image-column" id="imageColumn">
+            <img src="https://via.placeholder.com/300?text=Image+1" alt="Image 1">
+            <img src="https://via.placeholder.com/300?text=Image+2" alt="Image 2">
+            <img src="https://via.placeholder.com/300?text=Image+3" alt="Image 3">
+        </div>
+    </div>
+    <script src="test.js"></script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic HTML Page with GSAP</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .container {
+            display: flex;
+            flex-direction: row;
+            margin: 10px;
+        }
+        .sidebar {
+            flex: 1;
+            background-color: #f4f4f4;
+            padding: 15px;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+        }
+        .content {
+            flex: 3;
+            padding: 15px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Website</h1>
+    </header>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Sidebar</h2>
+            <ul>
+                <li><a href="#link1">Link 1</a></li>
+                <li><a href="#link2">Link 2</a></li>
+                <li><a href="#link3">Link 3</a></li>
+                <li><a href="#link4">Link 4</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <h2>Main Content</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris scelerisque erat at ligula egestas, a tempus lorem facilisis. Fusce viverra, odio a cursus lacinia, velit erat ullamcorper neque, sit amet bibendum libero ligula ac libero. Suspendisse potenti. Vestibulum volutpat hendrerit erat, et interdum justo suscipit ac. Nulla facilisi. Sed posuere libero quis urna pulvinar, sit amet tristique sapien malesuada.</p>
+            <h3>Section 1</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis tortor vitae urna consequat elementum. Proin id felis nunc. Phasellus tristique justo nec turpis facilisis, at dictum erat iaculis. Integer sed tortor sapien. Nulla quis dictum purus, in sollicitudin felis.</p>
+            <h3>Section 2</h3>
+            <p>Nulla facilisi. Integer vehicula risus eget ante sagittis, nec sollicitudin odio eleifend. Etiam feugiat odio ut felis pretium, a ullamcorper libero scelerisque. Curabitur mollis ultricies magna, sit amet gravida neque fringilla nec. Curabitur a augue tortor.</p>
+            <h3>Section 3</h3>
+            <p>Aliquam erat volutpat. Morbi ut placerat nunc. Vivamus sit amet semper ex, ut convallis nulla. Proin nec metus ut orci facilisis scelerisque. Cras viverra sapien eu nisi cursus, a suscipit nisi bibendum. Vivamus eget ante nec lectus malesuada interdum.</p>
+            <h3>Section 4</h3>
+            <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Praesent vitae orci vel metus scelerisque feugiat sit amet ac mauris. Donec pulvinar, sem eget tristique tristique, sapien ligula auctor lorem, vel bibendum justo odio et purus. Suspendisse non tristique magna. Duis ultrices vehicula felis, in consequat lectus bibendum non.</p>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 My Website. All rights reserved.</p>
+    </footer>
+    <script>
+        // GSAP animations
+        gsap.from("header", {duration: 1, y: -100, opacity: 0, ease: "bounce"});
+        gsap.from("nav a", {duration: 1, opacity: 0, stagger: 0.2, ease: "power2.inOut"});
+        gsap.from(".sidebar", {duration: 1, x: -200, opacity: 0, ease: "power2.inOut"});
+        gsap.from(".content h2", {duration: 1, opacity: 0, delay: 1, ease: "power2.inOut"});
+        gsap.from(".content p", {duration: 1, opacity: 0, stagger: 0.2, delay: 1.5, ease: "power2.inOut"});
+        gsap.from("footer", {duration: 1, y: 100, opacity: 0, ease: "bounce", delay: 2});
+    </script>
+</body>
+</html>
